@@ -23,8 +23,8 @@ Using a import time module, when I use wait it has a 1 second delay
 """
 
 
-def wait():
-    time.sleep(1)
+def wait(num):
+    time.sleep(num)
 
 
 def prelude_game():
@@ -34,23 +34,23 @@ def prelude_game():
 
     """
     print(f"Big Brain Word Chain")
-    time.sleep(.5)
+    wait(.25)
     global player_one
     player_one = input("Your Name Player 1?: ")
     global one
     one = Player(player_one, used_words_one, 0, 0)
-    wait()
+    wait(1)
 
     global player_two
     player_two = input("Your Name Player 2?: ")
     global two
     two = Player(player_two, used_words_two, 0, 0)
-    wait()
+    wait(1)
 
     print(f"\nPlayer 1: {one.name}!")
-    time.sleep(.5)
+    wait(.5)
     print(f"Player 2: {two.name}!\n")
-    wait()
+    wait(1)
 
     """
     This sets the players into a list so that it is easier for more to randomize
@@ -73,9 +73,9 @@ def prelude_game():
     global new_letter
     new_letter = random.choice(dictionary_words.letters)
     print(random.choice(usable_quote.quotes))
-    wait()
+    wait(1)
     print(f"\nLETTER: {new_letter}")
-    wait()
+    wait(1)
 
     print(
         f'\nTo quit enter "-1"! To see all words used enter "-2"! To see all words used by current player enter "-3"\n')
