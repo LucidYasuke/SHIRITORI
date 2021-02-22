@@ -1,7 +1,6 @@
 import random
-import dictionary_words
+from words import dictionary_words, usable_quote
 import time
-import usable_quote
 
 """
 The class is here two specify a players name, used words, points, and mistake
