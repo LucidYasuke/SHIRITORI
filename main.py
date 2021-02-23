@@ -58,6 +58,28 @@ def prelude_game():
     wait(1)
 
     """
+    This sets the game point of the Game
+    """
+    while True:
+        global final_point
+        final_point = input(f"How many points do you want to be max points\n {Fore.BLUE}7{Fore.RESET} Points / {Fore.BLUE}15{Fore.RESET} Points / {Fore.BLUE}21{Fore.RESET} Points \nMax Points:  ")
+        if final_point == "7":
+            final_point = 7
+            print(f"Game Final Point is {final_point}\n")
+            break
+        elif final_point == "15":
+            final_point = 15
+            print(f"Game Final Point is {final_point}\n")
+            break
+        elif final_point == "21":
+            final_point = 21
+            print(f"Game Final Point is {final_point}\n")
+            break
+        else:
+            print(f"\n")
+            continue
+
+    """
     This sets the players into a list so that it is easier for more to randomize
     The turn is mainly for later on in the code for an if/else statement, but it also tells who goes first
     """
@@ -67,9 +89,9 @@ def prelude_game():
     turn = random.choice(players)
 
     if turn == one:
-        print(f"{Fore.MAGENTA}{turn.name} goes first!\n")
+        print(f"{Fore.MAGENTA}{turn.name}{Fore.RESET} goes first!\n")
     elif turn == two:
-        print(f"{Fore.YELLOW}{turn.name} goes first!\n")
+        print(f"{Fore.YELLOW}{turn.name}{Fore.RESET} goes first!\n")
 
     # New_letter
     """
@@ -114,7 +136,7 @@ def shiritori():
                 The given word is an input by the user, using f-strings to make the ode cleaner, the player name is said and is asked for a word that starts with the new_letter
                 1. If the given word == '-1', that is a be
                 """
-                given_word = input(f"{Fore.MAGENTA}{turn.name} give us a word that starts with {new_letter}: ")
+                given_word = input(f"{Fore.MAGENTA}{turn.name}{Fore.RESET} give us a word that starts with {Fore.RED}{new_letter}: ")
                 if given_word == '-1':
                     quit()
 
@@ -155,7 +177,7 @@ def shiritori():
                         continue
 
                 elif not given_word.lower().startswith(new_letter): #If the given_word has not hit the first criteria, starting with the new_letter, a mistake is gicen and loop continued
-                    print(f"Word does not start with {new_letter}\n")
+                    print(f"Word does not start with {Fore.RESET}{new_letter}\n")
                     one.mistakes += 1
                     continue
             else:
@@ -170,7 +192,7 @@ def shiritori():
             When the player has 2 mistakes, the else statement resets their value to 0 and switches the turn to the other player for them to play
             """
             if two.mistakes < 2:
-                given_word = input(f"{Fore.YELLOW}{turn.name} give us a word that starts with {new_letter}: ")
+                given_word = input(f"{Fore.YELLOW}{turn.name}{Fore.RESET} give us a word that starts with {Fore.RED}{new_letter}: ")
                 if given_word == '-1':
                     quit()
 
@@ -211,7 +233,7 @@ def shiritori():
                         continue
 
                 elif not given_word.lower().startswith(new_letter): #If the given_word has not hit the first criteria, starting with the new_letter, a mistake is gicen and loop continued
-                    print(f"Word does not start with {new_letter}\n")
+                    print(f"Word does not start with {Fore.RED}{new_letter}\n")
                     two.mistakes +=1
                     continue
             else:
@@ -222,16 +244,16 @@ def shiritori():
 
 def run_shiritori():
     prelude_game()
-    while one.points < 5 and two.points < 5:
+    while one.points < final_point and two.points < final_point:
         shiritori()
 
-    print(f"\n{Fore.MAGENTA}{one.name} has {Fore.BLUE}{one.points} points!")
-    print(f"\n{Fore.YELLOW}{two.name} has {Fore.BLUE}{two.points} points!\n")
+    print(f"\n{Fore.MAGENTA}{one.name}{Fore.RESET} has {Fore.BLUE}{one.points}{Fore.RESET} points!")
+    print(f"\n{Fore.YELLOW}{two.name}{Fore.RESET} has {Fore.BLUE}{two.points}{Fore.RESET} points!\n")
 
     if one.points > two.points:
-        print(f"{Fore.MAGENTA}{one.name} WINS!")
+        print(f"{Fore.MAGENTA}{one.name}{Fore.RESET} WINS!")
     elif one.points < two.points:
-        print(f"{Fore.YELLOW}{two.name} WINS!")
+        print(f"{Fore.YELLOW}{two.name}{Fore.RESET} WINS!")
 
 
 run_shiritori()
