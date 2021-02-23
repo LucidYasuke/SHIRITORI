@@ -2,7 +2,7 @@ import random
 from words import dictionary_words, usable_quote
 import time
 import colorama
-from colorama import Fore
+from colorama import Fore, Back, Style
 
 
 colorama.init(autoreset=True)
@@ -38,8 +38,21 @@ def prelude_game():
     Using the class created above, we asses player one and two names, give them each a unique
 
     """
-    print(f"Big Brain Word Chain")
+    print(f"{Fore.RED}{Style.BRIGHT}Big Brain Word Chain{Style.RESET_ALL}")
     wait(.25)
+
+    print(f"Shiritori [Shee-ree-toh-ree] is a japanese word chain game that involves kana")
+    wait(.25)
+    print(f"This game takes inspiration from Shiritori but using english words and letters")
+    wait(.25)
+    print(f"This is a two player game, the first person to play will be given at random")
+    wait(.25)
+    print(f"If your word ends with a letter, the next player will have to come up with a word with that letter at the beginning")
+    wait(.25)
+    print(f"If you make two mistakes, the other person will get a chance to steal your point\n")
+    wait(.25)
+
+
     global player_one
     player_one = input("Your Name Player 1?: ")
     global one
