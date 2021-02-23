@@ -257,4 +257,3 @@ def run_shiritori():
 
 
 run_shiritori()
-
