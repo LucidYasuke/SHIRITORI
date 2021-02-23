@@ -52,7 +52,7 @@ def prelude_game():
     two = Player(player_two, used_words_two, 0, 0)
     wait(1)
 
-    print(f"\nPlayer 1: {Fore.MAGENTA}{one.name}!")
+    print(f"\nPlaer 1: {Fore.MAGENTA}{one.name}!")
     wait(.5)
     print(f"Player 2: {Fore.YELLOW}{two.name}!\n")
     wait(1)
