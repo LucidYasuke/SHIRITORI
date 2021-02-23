@@ -1,6 +1,12 @@
 import random
 from words import dictionary_words, usable_quote
 import time
+import colorama
+from colorama import Fore
+
+
+colorama.init(autoreset=True)
+
 
 """
 The class is here two specify a players name, used words, points, and mistake
@@ -46,9 +52,9 @@ def prelude_game():
     two = Player(player_two, used_words_two, 0, 0)
     wait(1)
 
-    print(f"\nPlayer 1: {one.name}!")
+    print(f"\nPlayer 1: {Fore.MAGENTA}{one.name}!")
     wait(.5)
-    print(f"Player 2: {two.name}!\n")
+    print(f"Player 2: {Fore.YELLOW}{two.name}!\n")
     wait(1)
 
     """
@@ -60,7 +66,10 @@ def prelude_game():
     global turn
     turn = random.choice(players)
 
-    print(f"{turn.name} goes first!\n")
+    if turn == one:
+        print(f"{Fore.MAGENTA}{turn.name} goes first!\n")
+    elif turn == two:
+        print(f"{Fore.YELLOW}{turn.name} goes first!\n")
 
     # New_letter
     """
@@ -73,7 +82,7 @@ def prelude_game():
     new_letter = random.choice(dictionary_words.letters)
     print(random.choice(usable_quote.quotes))
     wait(1)
-    print(f"\nLETTER: {new_letter}")
+    print(f"\nLETTER: {Fore.RED}{new_letter}")
     wait(1)
 
     print(
@@ -105,7 +114,7 @@ def shiritori():
                 The given word is an input by the user, using f-strings to make the ode cleaner, the player name is said and is asked for a word that starts with the new_letter
                 1. If the given word == '-1', that is a be
                 """
-                given_word = input(f"{turn.name} give us a word that starts with {new_letter}: ")
+                given_word = input(f"{Fore.MAGENTA}{turn.name} give us a word that starts with {new_letter}: ")
                 if given_word == '-1':
                     quit()
 
@@ -161,7 +170,7 @@ def shiritori():
             When the player has 2 mistakes, the else statement resets their value to 0 and switches the turn to the other player for them to play
             """
             if two.mistakes < 2:
-                given_word = input(f"{turn.name} give us a word that starts with {new_letter}: ")
+                given_word = input(f"{Fore.YELLOW}{turn.name} give us a word that starts with {new_letter}: ")
                 if given_word == '-1':
                     quit()
 
@@ -213,16 +222,16 @@ def shiritori():
 
 def run_shiritori():
     prelude_game()
-    while one.points < 25 and two.points < 25:
+    while one.points < 5 and two.points < 5:
         shiritori()
 
-    print(f"\n{one.name} has {one.points} points!")
-    print(f"\n{two.name} has {two.points} points!\n")
+    print(f"\n{Fore.MAGENTA}{one.name} has {Fore.BLUE}{one.points} points!")
+    print(f"\n{Fore.YELLOW}{two.name} has {Fore.BLUE}{two.points} points!\n")
 
     if one.points > two.points:
-        print(f"{one.name} WINS!")
+        print(f"{Fore.MAGENTA}{one.name} WINS!")
     elif one.points < two.points:
-        print(f"{two.name} WINS!")
+        print(f"{Fore.YELLOW}{two.name} WINS!")
 
 
 run_shiritori()
