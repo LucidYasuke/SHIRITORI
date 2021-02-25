@@ -2,7 +2,7 @@
  True,
  False,
  False,
- None,
+ 'main.ico',
  None,
  False,
  False,
@@ -199,7 +199,7 @@
  [],
  False,
  False,
- 1614091108,
+ 1614274803,
  [('run',
    '/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/PyInstaller/bootloader/Darwin-64bit/run',
    'EXECUTABLE')])
