@@ -263,6 +263,11 @@ def run_shiritori():
     print(f"\n{Fore.MAGENTA}{one.name}{Fore.RESET} has {Fore.BLUE}{one.points}{Fore.RESET} points!")
     print(f"\n{Fore.YELLOW}{two.name}{Fore.RESET} has {Fore.BLUE}{two.points}{Fore.RESET} points!\n")
 
+    print(f"All words used: {all_used_words}\n")
+    print(f"All words used by {Fore.MAGENTA}{one.name}{Fore.RESET} {one.used_words}\n")
+    print(f"All words used by {Fore.YELLOW}{two.name}{Fore.RESET} {two.used_words}\n")
+
+
     if one.points > two.points:
         print(f"{Fore.MAGENTA}{one.name}{Fore.RESET} WINS!")
     elif one.points < two.points:
