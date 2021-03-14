@@ -218,7 +218,7 @@ imported by:
   <a target="code" href="" type="text/plain"><tt>'org.python'</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
-    <a href="#pickle">pickle</a>
+    <a href="#copy">copy</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
 
   </div>
@@ -2165,7 +2165,8 @@ imported by:
   <a name="atexit"></a>
   <tt>atexit</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#logging">logging</a>
+    <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#logging">logging</a>
  &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#weakref">weakref</a>
 
@@ -2637,10 +2638,122 @@ imported by:
 
 <div class="node">
   <a name="colorama"></a>
-  <a target="code" href="" type="text/plain"><tt>colorama</tt></a>
-<span class="moduletype">MissingModule</span>  <div class="import">
+  <a target="code" href="/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/colorama/__init__.py" type="text/plain"><tt>colorama</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansi">colorama.ansi</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+
+  </div>
+  <div class="import">
 imported by:
-    <a href="#main.py">main.py</a>
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansi">colorama.ansi</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#colorama.winterm">colorama.winterm</a>
+ &#8226;   <a href="#main.py">main.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.ansi"></a>
+  <a target="code" href="/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/colorama/ansi.py" type="text/plain"><tt>colorama.ansi</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.ansitowin32"></a>
+  <a target="code" href="/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/colorama/ansitowin32.py" type="text/plain"><tt>colorama.ansitowin32</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansi">colorama.ansi</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#colorama.winterm">colorama.winterm</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.initialise"></a>
+  <a target="code" href="/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/colorama/initialise.py" type="text/plain"><tt>colorama.initialise</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#atexit">atexit</a>
+ &#8226;   <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#contextlib">contextlib</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.win32"></a>
+  <a target="code" href="/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/colorama/win32.py" type="text/plain"><tt>colorama.win32</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.winterm">colorama.winterm</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.winterm"></a>
+  <a target="code" href="/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/colorama/winterm.py" type="text/plain"><tt>colorama.winterm</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
 
   </div>
 
@@ -2798,6 +2911,7 @@ imported by:
  &#8226;   <a href="#_threading_local">_threading_local</a>
  &#8226;   <a href="#ast">ast</a>
  &#8226;   <a href="#asyncio.staggered">asyncio.staggered</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
  &#8226;   <a href="#getpass">getpass</a>
  &#8226;   <a href="#http.server">http.server</a>
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
@@ -2839,8 +2953,8 @@ imported by:
   <a target="code" href="/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/copy.py" type="text/plain"><tt>copy</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#copyreg">copyreg</a>
- &#8226;   <a href="#org">org</a>
+    <a href="#'org.python'">'org.python'</a>
+ &#8226;   <a href="#copyreg">copyreg</a>
  &#8226;   <a href="#types">types</a>
  &#8226;   <a href="#weakref">weakref</a>
 
@@ -2913,7 +3027,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#ctypes._aix">ctypes._aix</a>
+    <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#ctypes._aix">ctypes._aix</a>
  &#8226;   <a href="#ctypes._endian">ctypes._endian</a>
  &#8226;   <a href="#ctypes.macholib">ctypes.macholib</a>
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
@@ -2937,6 +3052,23 @@ imports:
   <div class="import">
 imported by:
     <a href="#ctypes">ctypes</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ctypes.wintypes"></a>
+  <a target="code" href="/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ctypes/wintypes.py" type="text/plain"><tt>ctypes.wintypes</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ctypes">ctypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#test.support">test.support</a>
 
   </div>
 
@@ -6971,7 +7103,7 @@ imports:
  &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib._bootstrap">importlib._bootstrap</a>
  &#8226;   <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
- &#8226;   <a href="#importlib.abc">importlib.abc</a>
+ &#8226;   <a href="#importlib.machinery">importlib.machinery</a>
  &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#types">types</a>
  &#8226;   <a href="#warnings">warnings</a>
@@ -7056,8 +7188,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#importlib">importlib</a>
- &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
+    <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.util">importlib.util</a>
  &#8226;   <a href="#zipimport">zipimport</a>
 
@@ -7079,6 +7210,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#ctypes.util">ctypes.util</a>
+ &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib.abc">importlib.abc</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
@@ -8492,7 +8624,7 @@ imported by:
   <a target="code" href="" type="text/plain"><tt>org</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
-    <a href="#copy">copy</a>
+    <a href="#pickle">pickle</a>
 
   </div>
 
@@ -8530,6 +8662,7 @@ imported by:
  &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
  &#8226;   <a href="#bdb">bdb</a>
  &#8226;   <a href="#bz2">bz2</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
  &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
  &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
  &#8226;   <a href="#configparser">configparser</a>
@@ -8711,8 +8844,7 @@ imported by:
   <a target="code" href="/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/pickle.py" type="text/plain"><tt>pickle</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#'org.python'">'org.python'</a>
- &#8226;   <a href="#_compat_pickle">_compat_pickle</a>
+    <a href="#_compat_pickle">_compat_pickle</a>
  &#8226;   <a href="#_pickle">_pickle</a>
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#copyreg">copyreg</a>
@@ -8720,6 +8852,7 @@ imports:
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#io">io</a>
  &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#org">org</a>
  &#8226;   <a href="#pprint">pprint</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#struct">struct</a>
@@ -9149,6 +9282,7 @@ imported by:
  &#8226;   <a href="#_strptime">_strptime</a>
  &#8226;   <a href="#argparse">argparse</a>
  &#8226;   <a href="#base64">base64</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
  &#8226;   <a href="#configparser">configparser</a>
  &#8226;   <a href="#csv">csv</a>
  &#8226;   <a href="#ctypes._aix">ctypes._aix</a>
@@ -9803,6 +9937,8 @@ imported by:
  &#8226;   <a href="#code">code</a>
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
  &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
  &#8226;   <a href="#configparser">configparser</a>
  &#8226;   <a href="#contextlib">contextlib</a>

@@ -29,8 +29,7 @@ Using a import time module, when I use wait it has a 1 second delay
 
 
 def wait(num):
-    range_num = num * .125
-    time.sleep(random.randint(num, range_num))
+    time.sleep(num)
 
 
 def prelude_game(num):
@@ -135,6 +134,7 @@ This is an English version using the last letter of a word
 def shiritori():
     global new_letter
     global turn
+    global given_word
     """
     Turn is randomized at the beginning of the game so this first if-elif checks if the turn is player one or player two turn
     The code for both versions are similar besides minor tweaks to change values to the specified player
