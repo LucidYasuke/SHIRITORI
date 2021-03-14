@@ -29,28 +29,29 @@ Using a import time module, when I use wait it has a 1 second delay
 
 
 def wait(num):
-    time.sleep(num)
+    range_num = num * .125
+    time.sleep(random.randint(num, range_num))
 
 
-def prelude_game():
+def prelude_game(num):
     # PLAYER ORGANIZE
     """
     Using the class created above, we asses player one and two names, give them each a unique
 
     """
     print(f"{Fore.RED}{Style.BRIGHT}Big Brain Word Chain{Style.RESET_ALL}")
-    wait(.25)
+    wait(num)
 
     print(f"Shiritori [Shee-ree-toh-ree] is a japanese word chain game that involves kana")
-    wait(.25)
+    wait(num)
     print(f"This game takes inspiration from Shiritori but using english words and letters")
-    wait(.25)
-    print(f"This is a two player game, the first person to play will be given at random")
-    wait(.25)
-    print(f"If your word ends with a letter, the next player will have to come up with a word with that letter at the beginning")
-    wait(.25)
-    print(f"If you make two mistakes, the other person will get a chance to steal your point\n")
-    wait(.25)
+    wait(num)
+    print(f"This is a two player game, the first person to play will be selected at random")
+    wait(num)
+    print(f"The next player will use the last letter of your word as the beginning letter for their word")
+    wait(num)
+    print(f"If you make two mistakes during your turn, the other person will get a chance to steal your point\n")
+    wait(num)
 
 
     global player_one
@@ -255,9 +256,9 @@ def shiritori():
                 break
 
 
-def run_shiritori():
-    prelude_game()
-    while one.points < final_point and two.points < final_point:
+def run_shiritori(num):
+    prelude_game(num)
+    while (one.points < final_point and two.points < final_point) or given_word == "-1":
         shiritori()
 
     print(f"\n{Fore.MAGENTA}{one.name}{Fore.RESET} has {Fore.BLUE}{one.points}{Fore.RESET} points!")
@@ -274,4 +275,4 @@ def run_shiritori():
         print(f"{Fore.YELLOW}{two.name}{Fore.RESET} WINS!")
 
 
-run_shiritori()
+run_shiritori(.25)
