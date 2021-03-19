@@ -25,12 +25,15 @@ used_words_one = []
 used_words_two = []
 
 """
-Using a import time module, when I use wait it has a 1 second delay
+Using a import time module and a for loop, create an unsymmetrical time interval so that the code isn't constant wait time
 """
 
 
 def wait(num):
-    time.sleep(num)
+    change = num * .125
+    for i in range(random.randint(2,6)):
+        change * 2
+    time.sleep(change)
 
 
 def prelude_game(num):
@@ -63,12 +66,12 @@ def prelude_game(num):
     player_two = input("Your Name Player 2?: ")
     global two
     two = Player(player_two, used_words_two, 0, 0)
-    wait(1)
+    time.sleep(1)
 
     print(f"\nPlayer 1: {Fore.MAGENTA}{one.name}!")
-    wait(.5)
+    time.sleep(.5)
     print(f"Player 2: {Fore.YELLOW}{two.name}!\n")
-    wait(1)
+    time.sleep(1)
 
     """
     This sets the game point of the Game
@@ -117,9 +120,9 @@ def prelude_game(num):
     global new_letter
     new_letter = random.choice(dictionary_words.letters)
     print(random.choice(usable_quote.quotes))
-    wait(1)
+    time.sleep(1)
     print(f"\nLETTER: {Fore.RED}{new_letter}")
-    wait(1)
+    time.sleep(1)
 
     print(
         f'\nTo quit enter "-1"! To see all words used enter "-2"! To see all words used by current player enter "-3"\n')
@@ -279,4 +282,4 @@ def run_shiritori(num):
         print(f"{Fore.YELLOW}{two.name}{Fore.RESET} WINS!")
 
 
-run_shiritori(.25)
+run_shiritori(1)
