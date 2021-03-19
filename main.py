@@ -24,7 +24,7 @@ all_used_words = []
 used_words_one = []
 used_words_two = []
 
-"""
+""" 
 Using a import time module and a for loop, create an unsymmetrical time interval so that the code isn't constant wait time
 """
 
