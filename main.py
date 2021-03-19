@@ -4,20 +4,21 @@ import time
 import colorama
 from colorama import Fore, Back, Style
 
-
 colorama.init(autoreset=True)
-
 
 """
 The class is here two specify a players name, used words, points, and mistake
 It changes as the game changes and it is helpful for accessing information without creating multiple variable
 """
+
+
 class Player:
     def __init__(self, name, used_words, points, mistakes):
         self.name = name
         self.used_words = used_words
         self.points = points
         self.mistakes = mistakes
+
 
 all_used_words = []
 used_words_one = []
@@ -52,7 +53,6 @@ def prelude_game(num):
     print(f"If you make two mistakes during your turn, the other person will get a chance to steal your point\n")
     wait(num)
 
-
     global player_one
     player_one = input("Your Name Player 1?: ")
     global one
@@ -75,7 +75,8 @@ def prelude_game(num):
     """
     while True:
         global final_point
-        final_point = input(f"How many points do you want to be max points\n {Fore.BLUE}7{Fore.RESET} Points / {Fore.BLUE}15{Fore.RESET} Points / {Fore.BLUE}21{Fore.RESET} Points \nMax Points:  ")
+        final_point = input(
+            f"How many points do you want to be max points\n {Fore.BLUE}7{Fore.RESET} Points / {Fore.BLUE}15{Fore.RESET} Points / {Fore.BLUE}21{Fore.RESET} Points \nMax Points:  ")
         if final_point == "7":
             final_point = 7
             print(f"Game Final Point is {final_point}\n")
@@ -150,7 +151,8 @@ def shiritori():
                 The given word is an input by the user, using f-strings to make the ode cleaner, the player name is said and is asked for a word that starts with the new_letter
                 1. If the given word == '-1', that is a be
                 """
-                given_word = input(f"{Fore.MAGENTA}{turn.name}{Fore.RESET} give us a word that starts with {Fore.RED}{new_letter}: ")
+                given_word = input(
+                    f"{Fore.MAGENTA}{turn.name}{Fore.RESET} give us a word that starts with {Fore.RED}{new_letter}: ")
                 if given_word == '-1':
                     quit()
 
@@ -163,13 +165,13 @@ def shiritori():
                     continue
 
                 elif given_word.lower().startswith(new_letter):
-                    if given_word.lower() not in all_used_words:    #if the word given by the player is not used, the code proceeds
-                        if given_word.lower() not in dictionary_words.words:    #If the word was not in used words but is also not in dictionary words the code will add a mistake to player and continue the loop
+                    if given_word.lower() not in all_used_words:  # if the word given by the player is not used, the code proceeds
+                        if given_word.lower() not in dictionary_words.words:  # If the word was not in used words but is also not in dictionary words the code will add a mistake to player and continue the loop
                             print(f"69000 words and yet your word is not in our dictionary!\n")
                             one.mistakes += 1
                             continue
 
-                        else:   #If the player hit all the right criteria, they will gain a point, the words will be added to their words and all words, and the last letter of the word will be take for the next word in the word chain
+                        else:  # If the player hit all the right criteria, they will gain a point, the words will be added to their words and all words, and the last letter of the word will be take for the next word in the word chain
                             all_used_words.append(given_word.lower())
                             one.used_words.append(given_word.lower())
                             one.points += 1
@@ -185,12 +187,13 @@ def shiritori():
                             turn = two
                             break
 
-                    else:   #A mistake is given if the word has been used
+                    else:  # A mistake is given if the word has been used
                         print(f"Word has already been used!\n")
                         one.mistakes += 1
                         continue
 
-                elif not given_word.lower().startswith(new_letter): #If the given_word has not hit the first criteria, starting with the new_letter, a mistake is gicen and loop continued
+                elif not given_word.lower().startswith(
+                        new_letter):  # If the given_word has not hit the first criteria, starting with the new_letter, a mistake is gicen and loop continued
                     print(f"Word does not start with {Fore.RESET}{new_letter}\n")
                     one.mistakes += 1
                     continue
@@ -206,7 +209,8 @@ def shiritori():
             When the player has 2 mistakes, the else statement resets their value to 0 and switches the turn to the other player for them to play
             """
             if two.mistakes < 2:
-                given_word = input(f"{Fore.YELLOW}{turn.name}{Fore.RESET} give us a word that starts with {Fore.RED}{new_letter}: ")
+                given_word = input(
+                    f"{Fore.YELLOW}{turn.name}{Fore.RESET} give us a word that starts with {Fore.RED}{new_letter}: ")
                 if given_word == '-1':
                     quit()
 
@@ -219,13 +223,13 @@ def shiritori():
                     continue
 
                 elif given_word.lower().startswith(new_letter):
-                    if given_word.lower() not in all_used_words:    #if the word given by the player is not used, the code proceeds
-                        if given_word.lower() not in dictionary_words.words:    #If the word was not in used words but is also not in dictionary words the code will add a mistake to player and continue the loop
+                    if given_word.lower() not in all_used_words:  # if the word given by the player is not used, the code proceeds
+                        if given_word.lower() not in dictionary_words.words:  # If the word was not in used words but is also not in dictionary words the code will add a mistake to player and continue the loop
                             print(f"69000 words and yet your word is not in our dictionary!\n")
                             two.mistakes += 1
                             continue
 
-                        else:   #If the player hit all the right criteria, they will gain a point, the words will be added to their words and all words, and the last letter of the word will be take for the next word in the word chain
+                        else:  # If the player hit all the right criteria, they will gain a point, the words will be added to their words and all words, and the last letter of the word will be take for the next word in the word chain
                             all_used_words.append(given_word.lower())
                             two.used_words.append(given_word.lower())
                             two.points += 1
@@ -241,14 +245,15 @@ def shiritori():
                             turn = one
                             break
 
-                    else:   #A mistake is given if the word has been used
+                    else:  # A mistake is given if the word has been used
                         print(f"Word has already been used!\n")
-                        two.mistakes +=1
+                        two.mistakes += 1
                         continue
 
-                elif not given_word.lower().startswith(new_letter): #If the given_word has not hit the first criteria, starting with the new_letter, a mistake is gicen and loop continued
+                elif not given_word.lower().startswith(
+                        new_letter):  # If the given_word has not hit the first criteria, starting with the new_letter, a mistake is gicen and loop continued
                     print(f"Word does not start with {Fore.RED}{new_letter}\n")
-                    two.mistakes +=1
+                    two.mistakes += 1
                     continue
             else:
                 two.mistakes = 0
@@ -267,7 +272,6 @@ def run_shiritori(num):
     print(f"All words used: {all_used_words}\n")
     print(f"All words used by {Fore.MAGENTA}{one.name}{Fore.RESET} {one.used_words}\n")
     print(f"All words used by {Fore.YELLOW}{two.name}{Fore.RESET} {two.used_words}\n")
-
 
     if one.points > two.points:
         print(f"{Fore.MAGENTA}{one.name}{Fore.RESET} WINS!")
