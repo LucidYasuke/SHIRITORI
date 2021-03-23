@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5796b3d-ab8e-48ef-92b1-74174ed4f9cd" name="Default Changelist" comment="Initial Commit" />
+    <list default="true" id="a5796b3d-ab8e-48ef-92b1-74174ed4f9cd" name="Default Changelist" comment="Initial Commit">
+      <change beforePath="$PROJECT_DIR$/Shiritori" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -91,7 +94,7 @@
       <workItem from="1616157661242" duration="768000" />
       <workItem from="1616159337604" duration="74000" />
       <workItem from="1616206546786" duration="1225000" />
-      <workItem from="1616532489252" duration="1535000" />
+      <workItem from="1616532489252" duration="2105000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1613941814543</created>
@@ -247,7 +250,28 @@
       <option name="project" value="LOCAL" />
       <updated>1616534125021</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Initial Commit">
+      <created>1616534348750</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1616534348750</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Initial Commit">
+      <created>1616534381799</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1616534381799</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Initial Commit">
+      <created>1616534427521</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1616534427521</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
